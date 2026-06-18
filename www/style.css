@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121214;
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.card {
+    background: #1e1e24;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.clock-section {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+#clock {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#date {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+#weather {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #a78bfa;
+}
+
+.input-group, .btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input, textarea, button {
+    background: #2d2d35;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+}
+
+input[type="time"] {
+    flex: 1;
+}
+
+button {
+    background: #7c3aed;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #6d28d9;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    resize: none;
+}
+
+.world-time {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* Floating Sticky Note Styling */
+#floating-note {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 250px;
+    height: 200px;
+    background: #fef08a;
+    color: #1c1917;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#floating-handle {
+    background: #facc15;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: move;
+}
+
+#floating-text {
+    background: transparent;
+    border: none;
+    color: #1c1917;
+    flex: 1;
+    padding: 10px;
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
