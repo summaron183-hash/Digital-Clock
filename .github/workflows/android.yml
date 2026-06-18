@@ -31,6 +31,7 @@ jobs:
       run: |
         cordova platform add android
         sed -i 's/compile/implementation/g' platforms/android/cordova-plugin-local-notification/*-localnotification.gradle
+        cordova plugin add cordova-plugin-androidx-ad apter
         cordova build android --device
 
     - name: Upload APK Artifact
