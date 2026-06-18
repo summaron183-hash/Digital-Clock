@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Dashboard Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <div class="card clock-section">
+            <div id="clock">00:00:00</div>
+            <div id="date">Loading date...</div>
+            <div id="weather">🌤️ Loading weather...</div>
+        </div>
+
+        <div class="card">
+            <h3>⏰ Alarm</h3>
+            <div class="input-group">
+                <input type="time" id="alarm-time">
+                <button onclick="setAlarm()">Set</button>
+            </div>
+            <div id="alarm-status">No alarm set</div>
+        </div>
+
+        <div class="card">
+            <h3>⏱️ Stopwatch</h3>
+            <div id="stopwatch-display">00:00:00</div>
+            <div class="btn-group">
+                <button onclick="startStopwatch()">Start</button>
+                <button onclick="pauseStopwatch()">Pause</button>
+                <button onclick="resetStopwatch()">Reset</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🌐 World Clock</h3>
+            <div class="world-time">📍 London: <span id="london-clock">00:00</span></div>
+            <div class="world-time">📍 New York: <span id="ny-clock">00:00</span></div>
+            <div class="world-time">📍 Tokyo: <span id="tokyo-clock">00:00</span></div>
+        </div>
+
+        <div class="card">
+            <h3>📝 Quick Note</h3>
+            <textarea id="note-input" placeholder="Type a note here..."></textarea>
+            <button onclick="enableFloatingNote()" style="width: 100%; margin-top: 10px;">📌 Float on Screen</button>
+        </div>
+    </div>
+
+    <div id="floating-note" class="hidden">
+        <div id="floating-handle">📌 Sticky Note <span onclick="closeFloatingNote()" style="float:right; cursor:pointer;">❌</span></div>
+        <textarea id="floating-text" placeholder="This stays on your display..."></textarea>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
