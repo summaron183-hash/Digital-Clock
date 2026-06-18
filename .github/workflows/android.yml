@@ -30,6 +30,7 @@ jobs:
     - name: Create Cordova Android Project
       run: |
         cordova platform add android
+        sed -i 's/compile/implementation/g' platforms/android/cordova-plugin-local-notification/*-localnotification.gradle
         cordova build android --device
 
     - name: Upload APK Artifact
